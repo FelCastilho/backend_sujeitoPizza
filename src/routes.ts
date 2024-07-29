@@ -1,10 +1,14 @@
-import { Router, Request, Response } from "express";
+import { Router, } from "express";
+
+import { CreateUserController } from "./controllers/user/createUserController";
+import { AuthUserController } from "./controllers/user/authUserController";
 
 const router = Router();
 
-//Tipando os itens com TS, assim podemos ver o que ele retorna
-router.get('/teste', (req: Request, res: Response) => {
-    return res.json({ nome: "Sujeito Pizza" })
-})
+//Rotas user
+router.post('/users', new CreateUserController().handle)
+
+//Rota de login
+router.post('/session', new AuthUserController().handle)
 
 export { router };
