@@ -1,7 +1,7 @@
 //Controlador para o serviço de logar o usuário
 
 import { Request, Response } from "express";
-import { AuthUserService } from "../../services/user/authUser";
+import { AuthUserService } from "../../services/user/authUserService";
 
 class AuthUserController{
     async handle(req: Request, res: Response){
