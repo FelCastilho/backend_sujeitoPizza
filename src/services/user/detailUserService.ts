@@ -8,7 +8,7 @@ class DetailUserService{
             where:{
                 id: user_id
             },
-            select:{ //Sekecionando o que vai aparecer 
+            select:{ //Selecionando o que vai aparecer 
                 id: true,
                 name: true,
                 email: true
